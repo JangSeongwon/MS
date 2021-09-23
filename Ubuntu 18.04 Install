@@ -26,3 +26,4 @@ or
 grep -c processor /proc/cpuinfo 
 sudo make-kpkg --J 12 --initrd --revision=1.0 kernel_image
  
+https://sourceexample.com/article/en/2b8da56187d81270d65df9015c5e308b/
