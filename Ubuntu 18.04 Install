@@ -1,10 +1,28 @@
 
 sudo apt update , upgrade
 
-Resolution
+-Resolution-
 sudo gedit /etc/default/grub
 GRUB_GFXMODE=1920x1080
 sudo update-grub
 sudo reboot
 
+-xenomai Install-
 
+wget https://mirrors.edge.kernel.org/pub/linux/kernel/v4.x/linux-4.14.128.tar.gz
+tar xf linux-4.14.128.tar.gz
+
+wget https://xenomai.org/downloads/xenomai/stable/xenomai-3.0.9.tar.bz2
+tar xf xenomai-3.0.9.tar.bz2
+
+cd linux-4.14.128
+wget https://xenomai.org/downloads/ipipe/v4.x/x86/ipipe-core-4.14.128-x86-5.patch
+../xenomai-3.0.9/scripts/prepare-kernel.sh --arch=x86_64 --ipipe=ipipe-core-4.14.128-x86-5.patch
+
+sudo make menuconfig
+
+sudo CONCURRENCY_LEVEL=8 CLEAN_SOURCE=no fakeroot make-kpkg --initrd --append-to-version --revision kernel_image kernel_headers
+or
+grep -c processor /proc/cpuinfo 
+sudo make-kpkg --J 12 --initrd --revision=1.0 kernel_image
+ 
