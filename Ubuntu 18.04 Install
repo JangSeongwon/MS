@@ -25,5 +25,10 @@ sudo CONCURRENCY_LEVEL=8 CLEAN_SOURCE=no fakeroot make-kpkg --initrd --append-to
 or
 grep -c processor /proc/cpuinfo 
 sudo make-kpkg --J 12 --initrd --revision=1.0 kernel_image
- 
+
+
+sudo gedit .config (from linux4-xxx)
+ CONFIG_SYSTEM_TRUSTED_KEYS="debian/canonical-certs.pem" 
+ CONFIG_SYSTEM_TRUSTED_KEYS=""
+
 https://sourceexample.com/article/en/2b8da56187d81270d65df9015c5e308b/
