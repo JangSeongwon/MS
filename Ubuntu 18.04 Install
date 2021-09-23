@@ -31,4 +31,8 @@ sudo gedit .config (from linux4-xxx)
  CONFIG_SYSTEM_TRUSTED_KEYS="debian/canonical-certs.pem" 
  CONFIG_SYSTEM_TRUSTED_KEYS=""
 
-https://sourceexample.com/article/en/2b8da56187d81270d65df9015c5e308b/
+-https://sourceexample.com/article/en/2b8da56187d81270d65df9015c5e308b/
+
+
+-Adjusting Ubuntu booting for xenomai
+https://askubuntu.com/questions/1081472/vmlinuz-4-18-12-041812-generic-has-invalid-signature
