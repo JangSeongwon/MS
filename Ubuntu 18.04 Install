@@ -16,7 +16,7 @@ wget https://xenomai.org/downloads/xenomai/stable/xenomai-3.1.tar.bz2
 tar xf xenomai-3.1.tar.bz2
 
 cd linux-4.9.38
-wget https://xenomai.org/downloads/ipipe/v4.x/x86/ipipe-core-4.9.38-x86-5.patch
+wget https://xenomai.org/downloads/ipipe/v4.x/x86/ipipe-core-4.9.38-x86-4.patch
 ../xenomai-3.1/scripts/prepare-kernel.sh --arch=x86_64 --ipipe=ipipe-core-4.9.38-x86-3.patch
 
 sudo make menuconfig
