@@ -9,21 +9,22 @@ sudo reboot
 
 -xenomai Install-
 
-wget https://mirrors.edge.kernel.org/pub/linux/kernel/v4.x/linux-4.9.38.tar.gz
-tar xf linux-4.9.38.tar.gz
+sudo wget https://mirrors.edge.kernel.org/pub/linux/kernel/v4.x/linux-5.4.102.tar.gz
+sudo tar xf linux-5.4.102.tar.gz
 
-wget https://xenomai.org/downloads/xenomai/stable/xenomai-3.1.tar.bz2
-tar xf xenomai-3.1.tar.bz2
+sudo wget https://xenomai.org/downloads/xenomai/stable/xenomai-3.1.tar.bz2
+sudo tar xf xenomai-3.1.tar.bz2
 
-cd linux-4.9.38
-wget https://xenomai.org/downloads/ipipe/v4.x/x86/ipipe-core-4.9.38-x86-4.patch
-../xenomai-3.1/scripts/prepare-kernel.sh --arch=x86_64 --ipipe=ipipe-core-4.9.38-x86-3.patch
+cd linux-5.4.102
+wget https://xenomai.org/downloads/ipipe/v5.x/x86/ipipe-core-5.4.102-x86-3.patch
+../xenomai-3.1/scripts/prepare-kernel.sh --arch=x86_64 --ipipe=ipipe-core-5.4.102-x86-3.patch
 
 sudo apt-get install build-essential libncurses5 libncurses5-dev bin86 kernel-package libssl-dev bison flex libelf-dev
 
+sudo cp /boot/config-현재커널명 ./.config
 sudo make menuconfig
 
-sudo CONCURRENCY_LEVEL=8 CLEAN_SOURCE=no fakeroot make-kpkg --initrd --append-to-version --revision kernel_image kernel_headers
+sudo CONCURRENCY_LEVEL=12 CLEAN_SOURCE=no fakeroot make-kpkg --initrd --append-to-version --revision kernel_image kernel_headers
 or
 grep -c processor /proc/cpuinfo 
 sudo make-kpkg --J 12 --initrd --revision=1.0 kernel_image
