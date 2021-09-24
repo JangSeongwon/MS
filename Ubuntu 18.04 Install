@@ -20,8 +20,6 @@ sudo wget https://xenomai.org/downloads/ipipe/v5.x/x86/ipipe-core-5.4.102-x86-3.
 sudo ../xenomai-3.1/scripts/prepare-kernel.sh --arch=x86_64 --ipipe=ipipe-core-5.4.102-x86-3.patch
 
 sudo apt-get install build-essential libncurses5 bin86 kernel-package libssl-dev bison flex libelf-dev
-sudo apt install kernel-package
-sudo apt-get install libssl-dev 
 sudo apt install libncurses5-dev
 
 
