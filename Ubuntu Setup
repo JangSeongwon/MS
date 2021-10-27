@@ -21,3 +21,27 @@ Chrome
 
 ROS Setup
 
+gedit ~/.bashrc
+     alias cw='cd ~/catkin_ws'  
+     alias cs='cd ~/catkin_ws/src'   
+     alias cm='cd ~/catkin_ws && catkin_make'  
+     
+     source /opt/ros/noetic/setup.bash
+     source ~/catkin_ws/devel/setup.bash
+     
+source ~/.bashrc
+
+<Building Package>
+catkin_create_pkg practice1 roscpp rospy std_msgs
+
+roscd practice1
+<Building Subscriber>
+     mkdir scripts
+     cd scripts
+     touch publisher_py_node.py 
+     chmod +x publisher_py_node.py 
+     gedit publisher_py_node.py
+       
+rosrun practice1 practice1.py
+
+<Message Type>
