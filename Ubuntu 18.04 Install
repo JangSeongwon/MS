@@ -9,15 +9,16 @@ sudo reboot
 
 -xenomai Install-
 
-sudo wget https://mirrors.edge.kernel.org/pub/linux/kernel/v5.x/linux-5.4.102.tar.gz
+sudo wget https://mirrors.edge.kernel.org/pub/linux/kernel/v5.x/linux-5.4.102.tar.gz / https://mirrors.edge.kernel.org/pub/linux/kernel/v4.x/linux-4.19.114.tar.xz  
 sudo tar xf linux-5.4.102.tar.gz
 
 sudo wget https://xenomai.org/downloads/xenomai/stable/xenomai-3.1.tar.bz2
 sudo tar xf xenomai-3.1.tar.bz2
 
 cd linux-5.4.102
-sudo wget https://xenomai.org/downloads/ipipe/v5.x/x86/ipipe-core-5.4.102-x86-3.patch
+sudo wget https://xenomai.org/downloads/ipipe/v5.x/x86/ipipe-core-5.4.102-x86-3.patch /  sudo wget https://xenomai.org/downloads/ipipe/v4.x/x86/ipipe-core-4.19.114-cip24-x86-12.patch 
 sudo ../xenomai-3.1/scripts/prepare-kernel.sh --arch=x86_64 --ipipe=ipipe-core-5.4.102-x86-3.patch
+sudo ../xenomai-3.1/scripts/prepare-kernel.sh --arch=x86_64 --ipipe=ipipe-core-4.19.114-cip24-x86-12.patch 
 
 sudo apt-get install build-essential libncurses5 bin86 kernel-package libssl-dev bison flex libelf-dev
 sudo apt install libncurses5-dev
@@ -26,6 +27,28 @@ sudo apt install libncurses5-dev
 sudo cp /boot/config-현재커널명 ./.config
 sudo make menuconfig
 
+Search sites 
+1. append to kernel release: -xenomai-3.1
+2. Xenomai/cobalt
+   + RTnet, TCP/IP socket interface (Enable)
+   + Drivers = New intel(R) PRO/1000 PCIe (Enable), Realtek 8169 (Enable), Loopback (Enable), Add-ons = Real-Time Capturing Support (Enable)
+3. (https://xenomai.org/pipermail/xenomai/2019-April/040804.html)
+   + Inorder to disable CPU frequnency scaling (Must disable 'Multi-core scheduler support' 'ScaleMP vSMP' 'Linux guest support')
+   + uncheck "Enable Maximum number of SMP Processor and NUMA Nodes'
+4. (https://rtt-lwr.readthedocs.io/en/latest/rtpc/xenomai.html) 
+   + ACPI (Advanced Configuration and Power Interface) Support --> Processor (Disable) then we can disable CPU IDLE
+5. Processor type and features
+   + Enable maximum number of SMP processors and NUMA nodes (Disable)
+   + Processor family
+
+6.Memory Management options
+   + Transparent Hugepage Support (Disable)
+   + Allow for memory compaction (Disable)
+   + Contiguous Memory Allocator (Disable)
+   + Allow for memory compaction: Page Migration (Disable)
+
+   
+  
 sudo CONCURRENCY_LEVEL=12 CLEAN_SOURCE=no fakeroot make-kpkg --initrd --append-to-version --revision kernel_image kernel_headers
 or
 grep -c processor /proc/cpuinfo 
