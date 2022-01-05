@@ -1,0 +1,9 @@
+
+          [방법]
+          
+Window+R 입력후 창에서 diskpart입력
+list disk
+sel disk (n)
+list partition
+sel partition (n)
+delete partition override
