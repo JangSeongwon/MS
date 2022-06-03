@@ -17,7 +17,7 @@ tar -xvf
 cd DEBS
 sudo dpkg -i *.deb
 
-Chrome
+Pycharm : Jang555
 
 ROS Setup
 
