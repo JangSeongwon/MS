@@ -19,7 +19,6 @@ sudo dpkg -i *.deb
 
 Pycharm : Jang555
 
-ROS Setup
 
 gedit ~/.bashrc
      alias cw='cd ~/catkin_ws'  
@@ -31,12 +30,10 @@ gedit ~/.bashrc
      alias pyc='cd ~/Downloads/pycharm-2022.1.2/bin && sh pycharm.sh'
      alias ca='conda activate'
      alias cda='conda deactivate'
-     
-     
+         
      source /opt/ros/noetic/setup.bash
      source ~/catkin_ws/devel/setup.bash
      
-source ~/.bashrc
 
 <Building Package>
 catkin_create_pkg practice1 roscpp rospy std_msgs
@@ -51,10 +48,6 @@ roscd practice1
        
 rosrun practice1 practice1.py
 
-<Message Type>
-
-
 
 Deleting Package
-
 catkin clean --dependents PKGNAME
