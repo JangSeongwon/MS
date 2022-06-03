@@ -26,6 +26,12 @@ gedit ~/.bashrc
      alias cs='cd ~/catkin_ws/src'   
      alias cm='cd ~/catkin_ws && catkin_make'  
      
+     alias sb='source ~/.bashrc'
+     alias gb='gedit ~/.bashrc'
+     alias pyc='cd ~/Downloads/pycharm-2022.1.2/bin && sh pycharm.sh'
+     
+     
+     
      source /opt/ros/noetic/setup.bash
      source ~/catkin_ws/devel/setup.bash
      
