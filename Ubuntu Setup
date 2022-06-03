@@ -29,7 +29,8 @@ gedit ~/.bashrc
      alias sb='source ~/.bashrc'
      alias gb='gedit ~/.bashrc'
      alias pyc='cd ~/Downloads/pycharm-2022.1.2/bin && sh pycharm.sh'
-     
+     alias ca='conda activate'
+     alias cda='conda deactivate'
      
      
      source /opt/ros/noetic/setup.bash
