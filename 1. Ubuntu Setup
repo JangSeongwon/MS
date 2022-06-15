@@ -24,15 +24,16 @@ Pycharm : Jang555
 ---------------------------------------------------------------------------------------------------------------
 
 gedit ~/.bashrc
-     alias cw='cd ~/catkin_ws'  
-     alias cs='cd ~/catkin_ws/src'   
-     alias cm='cd ~/catkin_ws && catkin_make'  
+
+alias cw='cd ~/catkin_ws'  
+alias cs='cd ~/catkin_ws/src'   
+alias cm='cd ~/catkin_ws && catkin_make'  
      
-     alias sb='source ~/.bashrc'
-     alias gb='gedit ~/.bashrc'
-     alias pyc='cd ~/Downloads/pycharm-2022.1.2/bin && sh pycharm.sh'
-     alias ca='conda activate'
-     alias cda='conda deactivate'
+alias sb='source ~/.bashrc'
+alias gb='gedit ~/.bashrc'
+alias pyc='cd ~/Downloads/pycharm-2022.1.2/bin && sh pycharm.sh'
+alias ca='conda activate'
+alias cda='conda deactivate'
          
      source /opt/ros/noetic/setup.bash
      source ~/catkin_ws/devel/setup.bash
