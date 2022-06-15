@@ -6,9 +6,13 @@ Check whether repository has been added : " sudo apt-key list "
 Delete CUDA previous version : " sudo rm /etc/apt/sources.list.d/cuda* "
 Delete CUDA toolkit version : " sudo apt remove --autoremove nvidia-cuda-toolkit "
 Delete previous CUDA dependent Nvidia files (Need to reinstall Nvidia driver -> Look GPU install code file)
-  sudo apt-get purge nvidia*
+  sudo apt-get --purge -y remove 'cuda*'
+  sudo apt-get --purge -y remove 'nvidia*'
   sudo apt-get autoremove
   sudo apt-get autoclean
+
+Check any remaining files : " sudo dpkg -l|grep cuda " , " sudo dpkg -l|grep nvidia " 
+If any exist, delete using : " sudo apt-get remove --purge (found file name) "
 
 2. Before installing CUDA
 
@@ -23,8 +27,10 @@ Check kernel version : " uname -r "
 3. Then install CUDA
 From  :  https://developer.nvidia.com/cuda-toolkit-archive
 
-                              ** Current : Using 11.3 version **
-
+                              ** Current : Using 11.6 version ** (Must set up recommended version by nvidia-smi)
+                             
+sudo apt install nvidia-cuda-toolkit
+nvcc -V
 --------------------------------------------------------------------------------------------------------
 
 ****CudNN Install****
