@@ -30,6 +30,13 @@ From  :  https://developer.nvidia.com/cuda-toolkit-archive
                               ** Current : Using 11.6 version ** (Must set up recommended version by nvidia-smi)
                              
 sudo apt install nvidia-cuda-toolkit
+
+*Add following paths to bashrc
+export PATH=/usr/local/cuda-11.6/bin${PATH:+:${PATH}}
+export LD_LIBRARY_PATH=/usr/local/cuda-11.6/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
+export LD_LIBRARY_PATH=/usr/local/cuda-11.6/lib${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
+
+
 nvcc -V
 --------------------------------------------------------------------------------------------------------
 
