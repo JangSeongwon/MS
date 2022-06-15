@@ -62,6 +62,7 @@ catkin clean --dependents PKGNAME
 sudo systemctl stop cups-browsed
 sudo systemctl disable cups-browsed
 
+Reactivate
 sudo systemctl start cups-browsed 
 sudo systemctl stop cups-browsed
 
