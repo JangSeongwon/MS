@@ -2,32 +2,52 @@
 
 1. uninstall previous CUDA 
 
-2. install new CUDA version
+Check whether repository has been added : " sudo apt-key list "
+Delete CUDA previous version : " sudo rm /etc/apt/sources.list.d/cuda* "
+Delete CUDA toolkit version : " sudo apt remove --autoremove nvidia-cuda-toolkit "
+Delete previous CUDA dependent Nvidia files (Need to reinstall Nvidia driver -> Look GPU install code file)
+  sudo apt-get purge nvidia*
+  sudo apt-get autoremove
+  sudo apt-get autoclean
 
+2. Before installing CUDA
+
+Check cuda compatible GPY : " lspci | grep -i nvidia "
+Check compatible linux version : " uname -m && cat /etc/*release "
+Check whether gcc installed : " gcc --version " , " sudo apt install gcc "
+Check kernel version : " uname -r "
+  Install headers : " sudo apt-get install linux-headers-$(uname -r) "
+  예: sudo apt-get install linux-headers-$5.8.0-44 
+  or Install headers using command : " sudo apt-get install linux-headers-generic "
+
+3. Then install CUDA
 From  :  https://developer.nvidia.com/cuda-toolkit-archive
 
+                              ** Current : Using 11.3 version **
 
 --------------------------------------------------------------------------------------------------------
 
 ****CudNN Install****
 
-With downloaded .deb file :   sudo dpkg -i ???.deb
+1. With downloaded .deb file :   sudo dpkg -i ???.deb
 
-To check whether downloaded :  ldconfig -p | grep cudnn
-
---------------------------------------------------------------------------------------------------------
-
-****Pytorch Install****
-
-
-
-
-
-
-
+2. To check whether downloaded :  ldconfig -p | grep cudnn
 
 --------------------------------------------------------------------------------------------------------
 
+****Anaconda & Pytorch Install****
+
+1. Anaconda
+
+Download .sh file from anaconda homepage & install
+Make new environment : " conda create -n (env name) " 
+
+2. Pytorch
+
+
+
+
+--------------------------------------------------------------------------------------------------------
 
 
 --------------------------------------------------------------------------------------------------------
