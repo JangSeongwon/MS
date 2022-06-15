@@ -2,7 +2,7 @@
 
 1. uninstall previous CUDA 
 
-Check whether repository has been added : " sudo apt-key list "
+Check whether repository has been added : " sudo apt-key list " -> To delete keys : Use SoftwareUpdate
 Delete CUDA previous version : " sudo rm /etc/apt/sources.list.d/cuda* "
 Delete CUDA toolkit version : " sudo apt remove --autoremove nvidia-cuda-toolkit "
 Delete previous CUDA dependent Nvidia files (Need to reinstall Nvidia driver -> Look GPU install code file)
