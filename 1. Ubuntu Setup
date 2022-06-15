@@ -68,7 +68,8 @@ sudo systemctl stop cups-browsed
 
 ---------------------------------------------------------------------------------------------------------------
 
-
+<When PUB_KEY=F60F4B3D7FA2AF80 is gone>
+sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys F60F4B3D7FA2AF80
 
 
 
