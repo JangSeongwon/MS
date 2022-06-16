@@ -27,7 +27,7 @@ Check kernel version : " uname -r "
 3. Then install CUDA
 From  :  https://developer.nvidia.com/cuda-toolkit-archive
 
-                              ** Current : Using 11.6 version ** (Must set up recommended version by nvidia-smi)
+                              ** Current : Using 11.5 version ** (Must set up recommended version by nvidia-smi)
                              
 *Add following paths to bashrc
 export PATH=/usr/local/cuda-11.6/bin${PATH:+:${PATH}}
