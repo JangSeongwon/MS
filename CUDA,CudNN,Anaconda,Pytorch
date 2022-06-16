@@ -42,7 +42,11 @@ nvcc -V
 
 1. With downloaded .deb file :   sudo dpkg -i ???.deb
 
-2. To check whether downloaded :  ldconfig -p | grep cudnn
+2. To check whether downloaded :  " cat /usr/local/cuda/include/cudnn_version.h | grep CUDNN_MAJOR -A 2 "
+=> #define CUDNN_MAJOR 8
+   #define CUDNN_MINOR 2 
+   ...
+   Then installed
 
 --------------------------------------------------------------------------------------------------------
 
