@@ -59,14 +59,16 @@ Download .sh file from anaconda homepage & install ( " sudo bash ???.sh " )
 " source ~/.bashrc " 
 " conda config --set auto_activate_base False " 
 
-Make new environment : " conda create -n (env name) " 
+Make new environment : " conda create -n (env name) python=3.8" 
+
+" conda env remove -n (env name) "
 
 2. Pytorch
 
+" pip3 install torch torchvision torchaudio --extra-index-url https://download.pytorch.org/whl/cu113 "
 
-
---------------------------------------------------------------------------------------------------------
-
+To check : " python3 " 
+" import torch "
 
 --------------------------------------------------------------------------------------------------------
 
