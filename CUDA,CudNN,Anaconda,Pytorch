@@ -54,17 +54,19 @@ nvcc -V
 
 1. Anaconda
 
-Download .sh file from anaconda homepage & install
+Download .sh file from anaconda homepage & install ( " sudo bash ???.sh " )
+
+" source ~/.bashrc " 
+" conda config --set auto_activate_base False " 
+
 Make new environment : " conda create -n (env name) " 
 
 2. Pytorch
 
 
 
-
 --------------------------------------------------------------------------------------------------------
 
 
 --------------------------------------------------------------------------------------------------------
-
 
