@@ -10,3 +10,8 @@ export PATH="$LD_LIBRARY_PATH:$PATH"
 #export LD_PRELOAD=/home/jang/anaconda3/envs/grasp/lib/libGLEW.so
 
 export LD_PRELOAD=/usr/lib/x86_64-linux-gnu/libGL.so:/usr/lib/x86_64-linux-gnu/libGLEW.so:/home/jang/anaconda3/envs/grasp/lib/libGLEW.so
+
+# Lookcloser Trial
+#export MUJOCO_PY_MUJOCO_PATH=$MUJOCO_PY_MUJOCO_PATH:/home/jang/.mujoco/mujoco200/bin
+#export MUJOCO_PY_MJKEY_PATH=$MUJOCO_PY_MJKEY_PATH:/home/jang/.mujoco
+
