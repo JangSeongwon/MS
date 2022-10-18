@@ -1,4 +1,5 @@
-# Ubuntu+Mujoco
+# Basic Settings
 
-Basic Settings
+Ubuntu+CUDA(Cudnn)+Pytorch+Mujoco
+
 
