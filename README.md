@@ -1,4 +1,4 @@
-# Basic-Ubuntu
+# Ubuntu+Mujoco
 
 Basic Settings
 
