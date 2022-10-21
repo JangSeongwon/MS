@@ -25,3 +25,22 @@ export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/lib/nvidia
 #export MUJOCO_PY_MJKEY_PATH=$MUJOCO_PY_MJKEY_PATH:/home/jang/.mujoco
 
 
+--------------------------------------------------------------------------------------
+<Moving-object-grasping-with-single-active-view-camera >
+#Mujoco
+export PATH=/usr/local/cuda-11.4/bin${PATH:+:${PATH}}
+export LD_LIBRARY_PATH=/usr/local/cuda-11.4/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
+export LD_LIBRARY_PATH=/usr/local/cuda-11.4/lib${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
+
+
+export CPATH=/home/anaconda3/envs/grasp/include
+#export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/jang/.mujoco/mujoco200/bin
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/jang/.mujoco/mujoco210/bin
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/lib/nvidia
+
+export PATH="$LD_LIBRARY_PATH:$PATH"
+#export LD_PRELOAD=/home/jang/anaconda3/envs/grasp/lib/libGLEW.so
+#export LD_PRELOAD=/usr/lib/x86_64-linux-gnu/libGL.so:/usr/lib/x86_64-linux-gnu/libGLEW.so:/home/jang/anaconda3/envs/grasp/lib/libGLEW.so
+
+
+
